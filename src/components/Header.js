@@ -23,6 +23,11 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: "bold",
 		cursor: "pointer",
 	},
+	headerImage: {
+		[theme.breakpoints.down("xs")]: {
+			display: "none",
+		},
+	},
 }));
 
 const darkTheme = createTheme({
@@ -77,7 +82,12 @@ const Header = () => {
 								gap: 2,
 							}}
 						>
-							<img src="./logoSherlock.png" alt="logo" height={35} />
+							<img
+								src="./logoSherlock.png"
+								alt="logo"
+								height={35}
+								className={classes.headerImage}
+							/>
 							Crypto Sherlock
 						</Typography>
 						<Select
